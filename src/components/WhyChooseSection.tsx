@@ -1,4 +1,5 @@
 import { CheckCircle, Target, Users, Code, Lightbulb, Award } from "lucide-react";
+import { motion } from "framer-motion";
 
 const differentials = [
   {
@@ -56,7 +57,13 @@ const WhyChooseSection = () => {
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-3xl mx-auto mb-16 lg:mb-20"
+        >
           <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">
             Por que a Lumarc Studio
           </span>
@@ -65,16 +72,20 @@ const WhyChooseSection = () => {
             <span className="text-gradient-gold">a diferença</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Não entregamos apenas um site, entregamos uma ferramenta de vendas 
+            Não entregamos apenas um site, entregamos uma ferramenta de vendas
             que trabalha 24/7 pelo seu negócio.
           </p>
-        </div>
+        </motion.div>
 
         {/* Differentials Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {differentials.map((item, index) => (
-            <div
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-8 hover-lift transition-all duration-300"
             >
               {/* Top Row */}
@@ -98,7 +109,7 @@ const WhyChooseSection = () => {
 
               {/* Bottom Accent */}
               <div className="absolute bottom-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

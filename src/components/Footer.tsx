@@ -7,40 +7,39 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {/* Logo & Description */}
           <div className="lg:col-span-2">
-            <a href="#" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center font-bold text-primary-foreground text-xl">
-                LM
-              </div>
-              <span className="text-lg font-bold text-foreground">
-                Lumarc <span className="text-primary">Studio</span>
-              </span>
+            <a href="#" className="inline-block mb-4 group">
+              <img
+                src="/assets/logo-sem-fundo.png"
+                alt="Lumarc Studio Logo"
+                className="h-14 w-auto object-contain transition-all duration-300 hover:scale-105 drop-shadow-[0_0_15px_rgba(234,179,8,0.2)]"
+              />
             </a>
             <p className="text-muted-foreground max-w-md mb-6">
-              Design que gera resultados. Especialistas em criação de sites e landing pages 
+              Design que gera resultados. Especialistas em criação de sites e landing pages
               de alta conversão para pequenos e médios empreendedores.
             </p>
             {/* Social Links */}
             <div className="flex gap-4">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
               >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
               >
                 <MessageCircle className="w-5 h-5" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
               >
                 <Mail className="w-5 h-5" />

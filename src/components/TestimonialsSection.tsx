@@ -1,4 +1,5 @@
 import { Star, Quote } from "lucide-react";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -26,7 +27,13 @@ const TestimonialsSection = () => {
     <section id="depoimentos" className="py-24 lg:py-32 relative bg-gradient-dark">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-3xl mx-auto mb-16 lg:mb-20"
+        >
           <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">
             Depoimentos
           </span>
@@ -37,13 +44,17 @@ const TestimonialsSection = () => {
           <p className="text-muted-foreground text-lg">
             Resultados reais de empresas que confiaram na Lumarc Studio.
           </p>
-        </div>
+        </motion.div>
 
         {/* Testimonials Grid */}
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
           {testimonials.map((testimonial, index) => (
-            <div
+            <motion.div
               key={index}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative bg-card border border-border rounded-2xl p-8 hover-lift transition-all duration-300 group"
             >
               {/* Quote Icon */}
@@ -76,7 +87,7 @@ const TestimonialsSection = () => {
 
               {/* Gold Border on Hover */}
               <div className="absolute inset-0 rounded-2xl border-2 border-primary/0 group-hover:border-primary/30 transition-colors duration-300 pointer-events-none" />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { MessageSquare, Lightbulb, Palette, Code, Rocket } from "lucide-react";
+import { motion } from "framer-motion";
 
 const steps = [
   {
@@ -41,7 +42,13 @@ const ProcessSection = () => {
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-3xl mx-auto mb-16 lg:mb-20"
+        >
           <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">
             Nosso Processo
           </span>
@@ -50,10 +57,10 @@ const ProcessSection = () => {
             <span className="text-gradient-gold">lançamento</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Um processo estruturado e transparente para entregar 
+            Um processo estruturado e transparente para entregar
             resultados excepcionais em cada projeto.
           </p>
-        </div>
+        </motion.div>
 
         {/* Timeline */}
         <div className="relative max-w-4xl mx-auto">
@@ -63,11 +70,14 @@ const ProcessSection = () => {
           {/* Steps */}
           <div className="space-y-8 lg:space-y-12">
             {steps.map((item, index) => (
-              <div
+              <motion.div
                 key={index}
-                className={`relative flex items-center gap-6 lg:gap-12 ${
-                  index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                }`}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`relative flex items-center gap-6 lg:gap-12 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                  }`}
               >
                 {/* Content Card */}
                 <div className={`flex-1 ${index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
@@ -91,7 +101,7 @@ const ProcessSection = () => {
 
                 {/* Spacer for opposite side */}
                 <div className="flex-1 hidden lg:block" />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
