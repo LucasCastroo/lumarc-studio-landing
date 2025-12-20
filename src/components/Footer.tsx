@@ -70,11 +70,7 @@ const Footer = () => {
                   Processo
                 </a>
               </li>
-              <li>
-                <a href="#depoimentos" className="text-muted-foreground hover:text-primary transition-colors">
-                  Depoimentos
-                </a>
-              </li>
+
             </ul>
           </div>
 
