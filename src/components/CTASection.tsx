@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle, Clock, Users } from "lucide-react";
 import { motion } from "framer-motion";
+import { openWhatsApp } from "@/lib/whatsapp";
 
 const CTASection = () => {
   return (
@@ -37,6 +38,7 @@ const CTASection = () => {
             variant="secondary"
             size="xl"
             className="bg-background text-foreground hover:bg-background/90 font-bold shadow-2xl group"
+            onClick={() => openWhatsApp()}
           >
             <MessageCircle className="w-5 h-5" />
             Fale conosco agora

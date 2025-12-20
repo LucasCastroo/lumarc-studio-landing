@@ -1,4 +1,5 @@
 import { Instagram, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { openWhatsApp } from "@/lib/whatsapp";
 
 const Footer = () => {
   return (
@@ -21,7 +22,9 @@ const Footer = () => {
             {/* Social Links */}
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://instagram.com/lumarc.studio"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
               >
                 <Instagram className="w-5 h-5" />
@@ -34,12 +37,13 @@ const Footer = () => {
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
+                onClick={(e) => { e.preventDefault(); openWhatsApp(); }}
+                className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300 cursor-pointer"
               >
                 <MessageCircle className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="mailto:contato@lumarcstudio.com"
                 className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
               >
                 <Mail className="w-5 h-5" />
@@ -84,7 +88,11 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="#"
+                  onClick={(e) => { e.preventDefault(); openWhatsApp(); }}
+                  className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+                >
                   WhatsApp
                 </a>
               </li>

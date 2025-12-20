@@ -7,15 +7,12 @@ import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
-import CustomCursor from "@/components/CustomCursor";
-
 const queryClient = new QueryClient();
 
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <CustomCursor />
         <Toaster />
         <Sonner />
         <BrowserRouter>
@@ -26,8 +23,8 @@ const App = () => (
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
-    </QueryClientProvider>
-  </HelmetProvider>
+    </QueryClientProvider >
+  </HelmetProvider >
 );
 
 export default App;

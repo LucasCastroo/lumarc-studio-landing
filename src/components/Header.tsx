@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X, Sparkles } from "lucide-react";
+import { openWhatsApp } from "@/lib/whatsapp";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -60,6 +61,7 @@ const Header = () => {
             <Button
               variant="default"
               className="bg-primary hover:bg-primary/90 text-black font-semibold rounded-full shadow-[0_0_15px_hsl(45,100%,50%,0.2)] hover:shadow-[0_0_25px_hsl(45,100%,50%,0.4)] transition-all"
+              onClick={() => openWhatsApp()}
             >
               Solicitar Orçamento
             </Button>
@@ -89,7 +91,10 @@ const Header = () => {
                     ))}
                   </div>
                   <div className="h-px bg-white/10 my-2" />
-                  <Button className="w-full bg-primary text-black font-semibold hover:bg-primary/90">
+                  <Button
+                    className="w-full bg-primary text-black font-semibold hover:bg-primary/90"
+                    onClick={() => openWhatsApp()}
+                  >
                     Solicitar Orçamento
                   </Button>
                 </div>

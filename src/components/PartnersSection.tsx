@@ -55,11 +55,14 @@ const PartnersSection = () => {
                             </p>
 
                             <div className="flex gap-4">
-                                <a href="#" className="p-3 bg-white/5 rounded-full hover:bg-gold hover:text-black transition-colors duration-300">
+                                <a href="https://www.linkedin.com/in/lucascastropmw" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-gold hover:text-black transition-colors duration-300">
                                     <Linkedin className="w-5 h-5" />
                                 </a>
-                                <a href="#" className="p-3 bg-white/5 rounded-full hover:bg-gold hover:text-black transition-colors duration-300">
+                                <a href="https://github.com/LucasCastroo" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-gold hover:text-black transition-colors duration-300">
                                     <Github className="w-5 h-5" />
+                                </a>
+                                <a href="https://www.instagram.com/llucass_castro" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-gold hover:text-black transition-colors duration-300">
+                                    <Instagram className="w-5 h-5" />
                                 </a>
                             </div>
                         </div>
@@ -96,10 +99,13 @@ const PartnersSection = () => {
                             </p>
 
                             <div className="flex gap-4">
-                                <a href="#" className="p-3 bg-white/5 rounded-full hover:bg-gold hover:text-black transition-colors duration-300">
+                                <a href="https://linkedin.com/in/marceloalvesll" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-gold hover:text-black transition-colors duration-300">
                                     <Linkedin className="w-5 h-5" />
                                 </a>
-                                <a href="#" className="p-3 bg-white/5 rounded-full hover:bg-gold hover:text-black transition-colors duration-300">
+                                <a href="https://github.com/Marceloalvesll" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-gold hover:text-black transition-colors duration-300">
+                                    <Github className="w-5 h-5" />
+                                </a>
+                                <a href="https://www.instagram.com/marcelo_alvesll" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-gold hover:text-black transition-colors duration-300">
                                     <Instagram className="w-5 h-5" />
                                 </a>
                             </div>
